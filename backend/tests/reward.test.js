@@ -15,6 +15,6 @@ describe("test suite for rewards route", () => {
     const res = await request(app).get("/api/rewards/1");
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toEqual({ result: 700 });
+    expect(res.body).toEqual({ result: 420 });
   });
 });

@@ -4,6 +4,7 @@ import "./index.css";
 
 const TransactionItems = ({ customerId }) => {
   const transactionsData = useFetch(`/api/transactions/${customerId}`);
+  const dateOfToday = new Date();
 
   return (
     <div data-testid="transaction-items-component">
@@ -15,13 +16,24 @@ const TransactionItems = ({ customerId }) => {
             <th>Bill Date</th>
           </tr>
           {transactionsData &&
-            transactionsData.map((item, i) => (
-              <tr key={i}>
-                <td>{item.Id}</td>
-                <td>{item.amount}</td>
-                <td>{item.billDate}</td>
-              </tr>
-            ))}
+            transactionsData.map((item, index) => {
+              const dateOfBillDate = new Date(item.billDate);
+
+              const diffTime = Math.abs(dateOfToday - dateOfBillDate);
+              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+              if (diffDays > 90) {
+                return;
+              }
+
+              return (
+                <tr key={index}>
+                  <td>{item.Id}</td>
+                  <td>{item.amount}</td>
+                  <td>{item.billDate}</td>
+                </tr>
+              );
+            })}
         </tbody>
       </table>
     </div>

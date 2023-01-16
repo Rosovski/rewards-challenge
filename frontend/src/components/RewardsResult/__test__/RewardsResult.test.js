@@ -15,14 +15,14 @@ describe("test suite for the component of rewards calculation result", () => {
 
   it("mock the api call to get response", async () => {
     apiClient.get.mockImplementationOnce(() =>
-      Promise.resolve({ data: { result: 700 } })
+      Promise.resolve({ data: { result: 420 } })
     );
 
     const { findByText, findByTestId } = render(
       <RewardsResult customerId="1" />
     );
 
-    const result = await findByText(/700/);
+    const result = await findByText(/420/);
     const resultDisplay = await findByTestId("rewards-result");
 
     expect(result).toBeInTheDocument();

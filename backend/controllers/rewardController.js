@@ -21,7 +21,10 @@ const getRewardsWithId = asyncHandler(async (req, res) => {
     const dateOfToday = new Date();
     const dateOfBillDate = new Date(billDate);
 
-    if (dateOfToday.getDay() - dateOfBillDate.getDay() > 90) {
+    const diffTime = Math.abs(dateOfToday - dateOfBillDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays > 90) {
       continue;
     }
 
