@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test suite for the component of transaction table matches snapshot 1`] = `
+<div
+  data-testid="transaction-items-component"
+>
+  <table
+    data-testid="transaction-table"
+  >
+    <tbody>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          Amount
+        </th>
+        <th>
+          Bill Date
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

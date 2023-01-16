@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test suite for the component of rewards calculation result matches snapshot 1`] = `
+<div
+  data-testid="rewards-component"
+>
+  <h2
+    data-testid="rewards-result"
+  >
+    The rewards that user earned in past 3 months is: 
+     points
+  </h2>
+</div>
+`;
