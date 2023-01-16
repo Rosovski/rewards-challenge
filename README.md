@@ -7,7 +7,12 @@ The online assessment for contractor role at Charter Communications
 ### Install dependencies
 
 ```
-npm run install:dependencies
+# Backend deps
+npm install
+
+# Frontend deps
+cd frontend
+npm install
 ```
 
 ### Run both frontend and backend
