@@ -52,7 +52,7 @@ To visit the home page, the URL is
 http://localhost:3000
 ```
 
-To visit a user's detail page, with his all transactions and earned points, a customer id is needed, the URL is
+To visit a user's detail page, with his all transactions in most recent 3 months and earned points, a customer id is needed, the URL is
 ```
 http://localhost:3000/{customerId}
 ```
