@@ -64,13 +64,13 @@ Notice: right now only userid with 1 and 2 contain mock data, other userid will 
 
 There are two APIs, to respond request of all transactions with a userId, and calculated earned points with a userId.
 
-### transactions API
+### GET/Transactions (customer ID)
 This is for retrieving all transactions from given customer id, use get method, the access is public.
 ```
 http://localhost:3001/api/transactions/{customerId}
 ```
 
-### rewards API
+### GET/Rewards (customer ID)
 This is for retrieving amount of earned points from given customer id, use get method, the access is public.
 ```
 http://localhost:3001/api/rewards/{customerId}
